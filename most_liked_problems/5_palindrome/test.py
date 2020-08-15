@@ -25,3 +25,12 @@ def watcher():
     while True:
         last, curr = curr, time()
         yield print(curr - last)
+
+def x(s):
+    m = 3
+    def y():
+        nonlocal s, m
+        s = 1
+        m = 4
+    y()
+    print(s, m)
